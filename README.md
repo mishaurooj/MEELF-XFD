@@ -109,6 +109,64 @@ MEELF-XFD addresses **multiple unresolved research gaps** in existing AUV fault 
 
 ---
 
+---
+
+## Visual Overview of the MEELF-XFD Framework
+
+This section presents the key figures used to illustrate the proposed MEELF-XFD framework, the structure of the Fault Expert Model Network (FEMNet), and the characteristics of the underlying AUV sensor data. Each figure is designed to support interpretability, reproducibility, and clarity of the proposed methodology.
+
+---
+
+### Figure 1: Overall Architecture of the MEELF-XFD Framework
+
+![MEELF-XFD Architecture](Figures/MEELF-XFD.png)
+
+**Figure 1.** Overall architecture of the proposed **Multi-Expert Lightweight Fusion Model with Explainable Fault Diagnosis (MEELF-XFD)**.
+
+**Explanation:**  
+This figure illustrates the complete end-to-end pipeline of MEELF-XFD, starting from raw multivariate AUV sensor signals and culminating in fault classification with explainable expert contributions. Raw `.csv` files are first processed through temporal windowing and channel-wise normalization. The processed signals are then passed to the **Fault Expert Model Network (FEMNet)**, which consists of three parallel expert branches:
+
+- **Temporal Dynamics Expert (TED):** Captures time-domain dynamics such as control response delays, oscillations, and transient behaviors.
+- **Frequency Domain Expert (FDE):** Extracts spectral characteristics using frequency-domain transformations to detect mechanical and propulsion-related faults.
+- **Statistical Behavior Expert (SBE):** Encodes steady-state signal properties using low-order statistical moments to identify bias and drift faults.
+
+The expert outputs are projected into a shared latent space and fused using an **adaptive attention-based weighting mechanism**, producing both fault predictions and interpretable expert contribution weights. The architecture is explicitly designed to remain lightweight, enabling real-time onboard deployment.
+ This block diagram also provides a detailed view of FEMNet’s internal structure. Each expert branch independently processes the same input window but focuses on a distinct physical manifestation of faults. Feature alignment layers ensure dimensional consistency before fusion. The **adaptive fusion module** assigns learnable contribution weights to each expert, enabling the model to emphasize the most informative domain for a given fault instance. This design directly supports explainability by exposing expert-level decision influence, which is later used for ethical reliability and trustworthiness analysis.
+
+---
+
+### Figure 3: AUV Sensor Signal Groups Under a Representative Experimental Run
+
+![AUV Sensor Signals](Figures/auv_sensor_signal_groups.png)
+
+**Figure 3.** Representative AUV sensor signals recorded during a single experimental run, grouped by functional category.
+
+**Explanation:**  
+This figure visualizes the multivariate sensor signals collected from the *Haizhe* AUV, including:
+
+1. **Control inputs:** PWM1–PWM4  
+2. **Depth and pressure measurements**  
+3. **Battery voltage**  
+4. **Attitude angles:** roll, pitch, yaw  
+5. **Linear accelerations:** a_x, a_y, a_z  
+6. **Angular velocities:** w_row, w_pitch, w_yaw  
+
+The figure highlights how different fault types affect distinct signal groups. For example, propeller damage introduces oscillatory patterns in frequency-sensitive signals, while depth sensor faults manifest as steady-state bias. These observations directly motivate the multi-expert design of MEELF-XFD, where temporal, frequency, and statistical representations are handled by specialized experts.
+
+---
+
+### Role of Figures in Explainability and Ethical Diagnosis
+
+The figures collectively serve three critical purposes:
+
+- **Explainability:** By explicitly separating signal processing into interpretable experts, the figures help users understand *why* a fault decision is made.
+- **Reproducibility:** Clear visualization of data flow and expert structure ensures that the framework can be independently reimplemented.
+- **Ethical Transparency:** Visual exposure of expert contributions aligns with ethical AI principles by avoiding opaque, black-box diagnosis.
+
+Together, these figures reinforce that MEELF-XFD is not only a high-performing diagnostic model, but also a **transparent, trustworthy, and deployment-aware framework** for safety-critical autonomous underwater systems.
+
+---
+
 ## Ablation & Performance Summary
 
 ### Architecture, Optimization, and Expert Ablation Results
