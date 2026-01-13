@@ -119,7 +119,7 @@ This section presents the key figures used to illustrate the proposed MEELF-XFD 
 
 ### Figure 1: Overall Architecture of the MEELF-XFD Framework
 
-![MEELF-XFD Architecture](Figures/MEELF-XFD.png)
+![MEELF-XFD Architecture](Figures/MELF-XFD.png)
 
 **Figure 1.** Overall architecture of the proposed **Multi-Expert Lightweight Fusion Model with Explainable Fault Diagnosis (MEELF-XFD)**.
 
