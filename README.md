@@ -158,8 +158,8 @@ The figure highlights how different fault types affect distinct signal groups. F
 ### Explainability and Ethical Diagnosis
 
 ![MEELF-XFD Architecture](Figures/expert_encodings_and_correlation.png)
-![MEELF-XFD Architecture](fault_wise_expert_sensitivity.png)
-![MEELF-XFD Architecture](temporal_gradcam_melfxfd.png)
+![z](Figures/fault_wise_expert_sensitivity.png)
+![xe](Figures/temporal_gradcam_melfxfd.png)
 The figures collectively serve three critical purposes:
 
 - **Explainability:** By explicitly separating signal processing into interpretable experts, the figures help users understand *why* a fault decision is made.
