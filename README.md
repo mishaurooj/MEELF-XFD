@@ -119,7 +119,7 @@ This section presents the key figures used to illustrate the proposed MEELF-XFD 
 
 ### Figure 1: Overall Architecture of the MEELF-XFD Framework
 
-![MEELF-XFD Architecture](Figures/MELF-XFD.png)
+![MEELF-XFD Architecture](Figures/MEELF-XFD.png)
 
 **Figure 1.** Overall architecture of the proposed **Multi-Expert Lightweight Fusion Model with Explainable Fault Diagnosis (MEELF-XFD)**.
 
@@ -155,8 +155,11 @@ The figure highlights how different fault types affect distinct signal groups. F
 
 ---
 
-### Role of Figures in Explainability and Ethical Diagnosis
+### Explainability and Ethical Diagnosis
 
+![MEELF-XFD Architecture](Figures/expert_encodings_and_correlation.png)
+![MEELF-XFD Architecture](fault_wise_expert_sensitivity.png)
+![MEELF-XFD Architecture](temporal_gradcam_melfxfd.png)
 The figures collectively serve three critical purposes:
 
 - **Explainability:** By explicitly separating signal processing into interpretable experts, the figures help users understand *why* a fault decision is made.
