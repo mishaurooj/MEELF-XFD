@@ -207,9 +207,6 @@ These results validate that MEELF-XFD is not only accurate, but also **safe, cal
 ## Citation
 
 If you use this repository, dataset, or framework, please cite:
-
-- D. Ji *et al.*, “Model-free fault diagnosis for autonomous underwater vehicles using sequence convolutional neural network,” *Ocean Engineering*, 2021.
-- D. Ji *et al.*, “Autonomous Underwater Vehicle Fault Diagnosis Dataset,” *Data in Brief*, 2021.
 - **MEELF-XFD (This Work)**, IEEE Open Journal of Vehicular Technology, 2026.
 
 ---
